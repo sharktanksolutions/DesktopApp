@@ -1,0 +1,4 @@
+E:\Data_laptop_1\D_drive\G_Drive\Files_1\dotproject\supershop\up_to_date\POS_4_1_3_1_Resource\CodeC_File_advance_pos\Adv_POS_6_1\POS_Adv_Project_6_2\POS_6_2_Source_Code\POS__SQLite\supershop\bin\Debug\Adv_POS.exe.config
+E:\Data_laptop_1\D_drive\G_Drive\Files_1\dotproject\supershop\up_to_date\POS_4_1_3_1_Resource\CodeC_File_advance_pos\Adv_POS_6_1\POS_Adv_Project_6_2\POS_6_2_Source_Code\POS__SQLite\supershop\obj\Debug\Interop.AcroPDFLib.dll
+E:\Data_laptop_1\D_drive\G_Drive\Files_1\dotproject\supershop\up_to_date\POS_4_1_3_1_Resource\CodeC_File_advance_pos\Adv_POS_6_1\POS_Adv_Project_6_2\POS_6_2_Source_Code\POS__SQLite\supershop\obj\Debug\AxInterop.AcroPDFLib.dll
+E:\Data_laptop_1\D_drive\G_Drive\Files_1\dotproject\supershop\up_to_date\POS_4_1_3_1_Resource\CodeC_File_advance_pos\Adv_POS_6_1\POS_Adv_Project_6_2\POS_6_2_Source_Code\POS__SQLite\supershop\obj\Debug\Adv_POS.csproj.ResolveComReference.cache
