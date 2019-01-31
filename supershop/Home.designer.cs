@@ -87,6 +87,7 @@
             this.userProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifierBuilderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -157,7 +158,6 @@
             this.toolStripMenuQuickSale = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.modifierBuilderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.contextStatus.SuspendLayout();
             this.contextMenu_Home.SuspendLayout();
@@ -738,6 +738,13 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.exitToolStripMenuItem.Text = "Sign Out";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // modifierBuilderToolStripMenuItem
+            // 
+            this.modifierBuilderToolStripMenuItem.Name = "modifierBuilderToolStripMenuItem";
+            this.modifierBuilderToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.modifierBuilderToolStripMenuItem.Text = "Modifier Builder";
+            this.modifierBuilderToolStripMenuItem.Click += new System.EventHandler(this.modifierBuilderToolStripMenuItem_Click);
             // 
             // addToolStripMenuItem1
             // 
@@ -1342,7 +1349,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
+            this.button1.Text = "Menu Group";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -1355,13 +1362,6 @@
             this.button2.Text = "Menu Item Editor";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // modifierBuilderToolStripMenuItem
-            // 
-            this.modifierBuilderToolStripMenuItem.Name = "modifierBuilderToolStripMenuItem";
-            this.modifierBuilderToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.modifierBuilderToolStripMenuItem.Text = "Modifier Builder";
-            this.modifierBuilderToolStripMenuItem.Click += new System.EventHandler(this.modifierBuilderToolStripMenuItem_Click);
             // 
             // Home
             // 
