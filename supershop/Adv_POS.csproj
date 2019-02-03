@@ -224,6 +224,12 @@
     <Compile Include="EntryForms\RenameButtonForm.Designer.cs">
       <DependentUpon>RenameButtonForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuGroups\MenuGroupsAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuGroups\MenuGroupsAll.Designer.cs">
+      <DependentUpon>MenuGroupsAll.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modifiers\ModBuilderSetupForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -783,6 +789,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\StockShortList.resx">
       <DependentUpon>StockShortList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuGroups\MenuGroupsAll.resx">
+      <DependentUpon>MenuGroupsAll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modifiers\ModBuilderSetupForm.resx">
       <DependentUpon>ModBuilderSetupForm.cs</DependentUpon>

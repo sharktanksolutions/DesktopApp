@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.gradientPanel1 = new supershop.GradientPanel();
-            this.backSpace = new supershop.RoundButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.roundButton7 = new supershop.RoundButton();
+            this.backSpace = new supershop.RoundButton();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.enterButton = new supershop.RoundButton();
             this.roundButton9 = new supershop.RoundButton();
             this.roundButton8 = new supershop.RoundButton();
             this.roundButton10 = new supershop.RoundButton();
@@ -44,15 +47,15 @@
             this.roundButton2 = new supershop.RoundButton();
             this.roundButton1 = new supershop.RoundButton();
             this.gradientPanel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gradientPanel1
             // 
             this.gradientPanel1.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(75)))), ((int)(((byte)(70)))));
             this.gradientPanel1.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(91)))), ((int)(((byte)(83)))));
-            this.gradientPanel1.Controls.Add(this.backSpace);
-            this.gradientPanel1.Controls.Add(this.textBox1);
-            this.gradientPanel1.Controls.Add(this.roundButton7);
+            this.gradientPanel1.Controls.Add(this.groupBox1);
+            this.gradientPanel1.Controls.Add(this.enterButton);
             this.gradientPanel1.Controls.Add(this.roundButton9);
             this.gradientPanel1.Controls.Add(this.roundButton8);
             this.gradientPanel1.Controls.Add(this.roundButton10);
@@ -66,8 +69,38 @@
             this.gradientPanel1.Controls.Add(this.roundButton1);
             this.gradientPanel1.Location = new System.Drawing.Point(12, 12);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(362, 481);
+            this.gradientPanel1.Size = new System.Drawing.Size(462, 624);
             this.gradientPanel1.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(91)))), ((int)(((byte)(83)))));
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.backSpace);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(225)))), ((int)(((byte)(181)))));
+            this.groupBox1.Location = new System.Drawing.Point(13, 11);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(436, 131);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Enter Phone Number";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(15, 46);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.MaxLength = 3;
+            this.textBox1.MinimumSize = new System.Drawing.Size(50, 50);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(68, 37);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Click += new System.EventHandler(this.textInput_Click);
+            this.textBox1.TextChanged += new System.EventHandler(this.textInput_TextChanged);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textInput_KeyPress);
             // 
             // backSpace
             // 
@@ -79,7 +112,7 @@
             this.backSpace.FlatAppearance.BorderSize = 0;
             this.backSpace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backSpace.Image = global::supershop.Properties.Resources.iconsBackSpace;
-            this.backSpace.Location = new System.Drawing.Point(215, 19);
+            this.backSpace.Location = new System.Drawing.Point(313, 30);
             this.backSpace.Name = "backSpace";
             this.backSpace.OnHoverBorderColor = System.Drawing.Color.Empty;
             this.backSpace.OnHoverButtonColor = System.Drawing.Color.Empty;
@@ -88,40 +121,57 @@
             this.backSpace.TabIndex = 16;
             this.backSpace.TextColor = System.Drawing.Color.Empty;
             this.backSpace.UseVisualStyleBackColor = false;
-            this.backSpace.Click += new System.EventHandler(this.roundButton13_Click);
+            this.backSpace.Click += new System.EventHandler(this.backSpace_Click);
             this.backSpace.MouseUp += new System.Windows.Forms.MouseEventHandler(this.backSpace_MouseUp);
             // 
-            // textBox1
+            // textBox2
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(19, 37);
-            this.textBox1.MaximumSize = new System.Drawing.Size(200, 60);
-            this.textBox1.MinimumSize = new System.Drawing.Size(150, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 43);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.textBox2.Location = new System.Drawing.Point(101, 46);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.MaxLength = 3;
+            this.textBox2.MinimumSize = new System.Drawing.Size(50, 50);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(94, 37);
+            this.textBox2.TabIndex = 7;
+            this.textBox2.Click += new System.EventHandler(this.textInput_Click);
+            this.textBox2.TextChanged += new System.EventHandler(this.textInput_TextChanged);
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textInput_KeyPress);
             // 
-            // roundButton7
+            // textBox3
             // 
-            this.roundButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(75)))), ((int)(((byte)(70)))));
-            this.roundButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.roundButton7.BorderColor = System.Drawing.Color.Empty;
-            this.roundButton7.ButtonColor = System.Drawing.Color.Empty;
-            this.roundButton7.FlatAppearance.BorderSize = 0;
-            this.roundButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton7.Image = global::supershop.Properties.Resources.checkIcon;
-            this.roundButton7.Location = new System.Drawing.Point(215, 376);
-            this.roundButton7.Name = "roundButton7";
-            this.roundButton7.OnHoverBorderColor = System.Drawing.Color.Empty;
-            this.roundButton7.OnHoverButtonColor = System.Drawing.Color.Empty;
-            this.roundButton7.OnHoverTextColor = System.Drawing.Color.Empty;
-            this.roundButton7.Size = new System.Drawing.Size(85, 85);
-            this.roundButton7.TabIndex = 14;
-            this.roundButton7.TextColor = System.Drawing.Color.Empty;
-            this.roundButton7.UseVisualStyleBackColor = false;
-            this.roundButton7.Click += new System.EventHandler(this.roundButton7_Click);
+            this.textBox3.AcceptsReturn = true;
+            this.textBox3.Location = new System.Drawing.Point(211, 46);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.MaxLength = 4;
+            this.textBox3.MinimumSize = new System.Drawing.Size(90, 50);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(95, 37);
+            this.textBox3.TabIndex = 8;
+            this.textBox3.Click += new System.EventHandler(this.textInput_Click);
+            this.textBox3.TextChanged += new System.EventHandler(this.textInput_TextChanged);
+            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown_1);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textInput_KeyPress);
+            // 
+            // enterButton
+            // 
+            this.enterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(75)))), ((int)(((byte)(70)))));
+            this.enterButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.enterButton.BorderColor = System.Drawing.Color.Empty;
+            this.enterButton.ButtonColor = System.Drawing.Color.Empty;
+            this.enterButton.FlatAppearance.BorderSize = 0;
+            this.enterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.enterButton.Image = global::supershop.Properties.Resources.checkIcon;
+            this.enterButton.Location = new System.Drawing.Point(214, 527);
+            this.enterButton.Name = "enterButton";
+            this.enterButton.OnHoverBorderColor = System.Drawing.Color.Empty;
+            this.enterButton.OnHoverButtonColor = System.Drawing.Color.Empty;
+            this.enterButton.OnHoverTextColor = System.Drawing.Color.Empty;
+            this.enterButton.Size = new System.Drawing.Size(85, 85);
+            this.enterButton.TabIndex = 14;
+            this.enterButton.TextColor = System.Drawing.Color.Empty;
+            this.enterButton.UseVisualStyleBackColor = false;
+            this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
             // 
             // roundButton9
             // 
@@ -132,7 +182,7 @@
             this.roundButton9.FlatAppearance.BorderSize = 0;
             this.roundButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton9.Image = global::supershop.Properties.Resources.deleteIcon;
-            this.roundButton9.Location = new System.Drawing.Point(14, 376);
+            this.roundButton9.Location = new System.Drawing.Point(13, 527);
             this.roundButton9.Name = "roundButton9";
             this.roundButton9.OnHoverBorderColor = System.Drawing.Color.Empty;
             this.roundButton9.OnHoverButtonColor = System.Drawing.Color.Empty;
@@ -151,7 +201,7 @@
             this.roundButton8.FlatAppearance.BorderSize = 0;
             this.roundButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton8.Font = new System.Drawing.Font("Century Gothic", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton8.Location = new System.Drawing.Point(119, 381);
+            this.roundButton8.Location = new System.Drawing.Point(118, 532);
             this.roundButton8.Name = "roundButton8";
             this.roundButton8.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.roundButton8.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -161,6 +211,7 @@
             this.roundButton8.Text = "0";
             this.roundButton8.TextColor = System.Drawing.Color.White;
             this.roundButton8.UseVisualStyleBackColor = false;
+            this.roundButton8.Click += new System.EventHandler(this.buttonInput);
             // 
             // roundButton10
             // 
@@ -170,7 +221,7 @@
             this.roundButton10.FlatAppearance.BorderSize = 0;
             this.roundButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton10.Font = new System.Drawing.Font("Century Gothic", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton10.Location = new System.Drawing.Point(221, 289);
+            this.roundButton10.Location = new System.Drawing.Point(220, 440);
             this.roundButton10.Margin = new System.Windows.Forms.Padding(5);
             this.roundButton10.Name = "roundButton10";
             this.roundButton10.OnHoverBorderColor = System.Drawing.Color.Gray;
@@ -182,6 +233,7 @@
             this.roundButton10.Text = "9";
             this.roundButton10.TextColor = System.Drawing.Color.White;
             this.roundButton10.UseVisualStyleBackColor = false;
+            this.roundButton10.Click += new System.EventHandler(this.buttonInput);
             // 
             // roundButton11
             // 
@@ -191,7 +243,7 @@
             this.roundButton11.FlatAppearance.BorderSize = 0;
             this.roundButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton11.Font = new System.Drawing.Font("Century Gothic", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton11.Location = new System.Drawing.Point(119, 289);
+            this.roundButton11.Location = new System.Drawing.Point(118, 440);
             this.roundButton11.Name = "roundButton11";
             this.roundButton11.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.roundButton11.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -201,6 +253,7 @@
             this.roundButton11.Text = "8";
             this.roundButton11.TextColor = System.Drawing.Color.White;
             this.roundButton11.UseVisualStyleBackColor = false;
+            this.roundButton11.Click += new System.EventHandler(this.buttonInput);
             // 
             // roundButton12
             // 
@@ -210,7 +263,7 @@
             this.roundButton12.FlatAppearance.BorderSize = 0;
             this.roundButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton12.Font = new System.Drawing.Font("Century Gothic", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton12.Location = new System.Drawing.Point(19, 289);
+            this.roundButton12.Location = new System.Drawing.Point(18, 440);
             this.roundButton12.Name = "roundButton12";
             this.roundButton12.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.roundButton12.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -220,6 +273,7 @@
             this.roundButton12.Text = "7";
             this.roundButton12.TextColor = System.Drawing.Color.White;
             this.roundButton12.UseVisualStyleBackColor = false;
+            this.roundButton12.Click += new System.EventHandler(this.buttonInput);
             // 
             // roundButton4
             // 
@@ -229,7 +283,7 @@
             this.roundButton4.FlatAppearance.BorderSize = 0;
             this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton4.Font = new System.Drawing.Font("Century Gothic", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton4.Location = new System.Drawing.Point(221, 202);
+            this.roundButton4.Location = new System.Drawing.Point(220, 353);
             this.roundButton4.Name = "roundButton4";
             this.roundButton4.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.roundButton4.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -239,6 +293,7 @@
             this.roundButton4.Text = "6";
             this.roundButton4.TextColor = System.Drawing.Color.White;
             this.roundButton4.UseVisualStyleBackColor = false;
+            this.roundButton4.Click += new System.EventHandler(this.buttonInput);
             // 
             // roundButton5
             // 
@@ -248,7 +303,7 @@
             this.roundButton5.FlatAppearance.BorderSize = 0;
             this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton5.Font = new System.Drawing.Font("Century Gothic", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton5.Location = new System.Drawing.Point(119, 202);
+            this.roundButton5.Location = new System.Drawing.Point(118, 353);
             this.roundButton5.Name = "roundButton5";
             this.roundButton5.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.roundButton5.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -258,6 +313,7 @@
             this.roundButton5.Text = "5";
             this.roundButton5.TextColor = System.Drawing.Color.White;
             this.roundButton5.UseVisualStyleBackColor = false;
+            this.roundButton5.Click += new System.EventHandler(this.buttonInput);
             // 
             // roundButton6
             // 
@@ -267,7 +323,7 @@
             this.roundButton6.FlatAppearance.BorderSize = 0;
             this.roundButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton6.Font = new System.Drawing.Font("Century Gothic", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton6.Location = new System.Drawing.Point(19, 202);
+            this.roundButton6.Location = new System.Drawing.Point(18, 353);
             this.roundButton6.Name = "roundButton6";
             this.roundButton6.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.roundButton6.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -277,6 +333,7 @@
             this.roundButton6.Text = "4";
             this.roundButton6.TextColor = System.Drawing.Color.White;
             this.roundButton6.UseVisualStyleBackColor = false;
+            this.roundButton6.Click += new System.EventHandler(this.buttonInput);
             // 
             // roundButton3
             // 
@@ -286,7 +343,7 @@
             this.roundButton3.FlatAppearance.BorderSize = 0;
             this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton3.Font = new System.Drawing.Font("Century Gothic", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton3.Location = new System.Drawing.Point(221, 116);
+            this.roundButton3.Location = new System.Drawing.Point(220, 267);
             this.roundButton3.Name = "roundButton3";
             this.roundButton3.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.roundButton3.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -296,6 +353,7 @@
             this.roundButton3.Text = "3";
             this.roundButton3.TextColor = System.Drawing.Color.White;
             this.roundButton3.UseVisualStyleBackColor = false;
+            this.roundButton3.Click += new System.EventHandler(this.buttonInput);
             // 
             // roundButton2
             // 
@@ -305,7 +363,7 @@
             this.roundButton2.FlatAppearance.BorderSize = 0;
             this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton2.Font = new System.Drawing.Font("Century Gothic", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton2.Location = new System.Drawing.Point(119, 116);
+            this.roundButton2.Location = new System.Drawing.Point(118, 267);
             this.roundButton2.Name = "roundButton2";
             this.roundButton2.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.roundButton2.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -315,6 +373,7 @@
             this.roundButton2.Text = "2";
             this.roundButton2.TextColor = System.Drawing.Color.White;
             this.roundButton2.UseVisualStyleBackColor = false;
+            this.roundButton2.Click += new System.EventHandler(this.buttonInput);
             // 
             // roundButton1
             // 
@@ -324,7 +383,7 @@
             this.roundButton1.FlatAppearance.BorderSize = 0;
             this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton1.Font = new System.Drawing.Font("Century Gothic", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton1.Location = new System.Drawing.Point(19, 116);
+            this.roundButton1.Location = new System.Drawing.Point(18, 267);
             this.roundButton1.Name = "roundButton1";
             this.roundButton1.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.roundButton1.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -334,18 +393,20 @@
             this.roundButton1.Text = "1";
             this.roundButton1.TextColor = System.Drawing.Color.White;
             this.roundButton1.UseVisualStyleBackColor = false;
+            this.roundButton1.Click += new System.EventHandler(this.buttonInput);
             // 
             // PhoneEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 505);
+            this.ClientSize = new System.Drawing.Size(614, 648);
             this.Controls.Add(this.gradientPanel1);
             this.Name = "PhoneEntry";
             this.Text = "PhoneEntry";
             this.Load += new System.EventHandler(this.PhoneEntry_Load);
             this.gradientPanel1.ResumeLayout(false);
-            this.gradientPanel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -364,8 +425,11 @@
         private RoundButton roundButton3;
         private RoundButton roundButton2;
         private RoundButton roundButton9;
-        private RoundButton roundButton7;
-        private System.Windows.Forms.TextBox textBox1;
+        private RoundButton enterButton;
         private RoundButton backSpace;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

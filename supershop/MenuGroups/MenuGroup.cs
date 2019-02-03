@@ -19,7 +19,115 @@ namespace supershop.Ordering
             InitializeComponent();
            // this.Controls.Clear();
         }
-        
+
+        public Point initialPos;
+        public Point destinationPos;
+        public Point DestinationPos { get => destinationPos; set => destinationPos = value; }
+
+        Point? GetRowColIndex(TableLayoutPanel tlp, Point point)
+        {
+            if (point.X > tlp.Width || point.Y > tlp.Height)
+                return null;
+
+            int w = tlp.Width;
+            int h = tlp.Height;
+            int[] widths = tlp.GetColumnWidths();
+
+            int i;
+            for (i = widths.Length - 1; i >= 0 && point.X < w; i--)
+                w -= widths[i];
+            int col = i + 1;
+
+            int[] heights = tlp.GetRowHeights();
+            for (i = heights.Length - 1; i >= 0 && point.Y < h; i--)
+                h -= heights[i];
+
+            int row = i + 1;
+            //Console.WriteLine("col-->" + col);
+            //Console.WriteLine("row-->" + row);
+            return new Point(col, row);
+        }
+
+        private void drag_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+
+                Console.WriteLine("Right click");
+
+
+                var cellPos = GetRowColIndex(
+                    tableLayoutPanel1,
+                    tableLayoutPanel1.PointToClient(Cursor.Position));
+                //tableLayoutPanel1.GetControlFromPosition(destinationPos.X, destinationPos.Y).BackColor = Color.Red;
+                // our initial Point 
+
+
+
+                Console.WriteLine("Mouse Down on button");
+                Console.WriteLine("We are initially at-->" + cellPos.ToString());
+                initialPos = (Point)cellPos;
+                Console.WriteLine("Set Initail Pos to-----}" + initialPos);
+
+
+            }
+
+
+            //if (e.Button == System.Windows.Forms.MouseButtons.Left) { MessageBox.Show("Left click"); }
+
+
+        }
+
+
+
+
+        private void drag_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                try
+                {
+                    // get the currernt position of the cell 
+                    Console.WriteLine("Trying to get Inital Pos-->" + initialPos.ToString());
+
+                    // get destination position of new cell
+
+                    var cellPos = GetRowColIndex(
+                        tableLayoutPanel1,
+                        tableLayoutPanel1.PointToClient(Cursor.Position));
+                    destinationPos = (Point)cellPos;
+
+                    if (tableLayoutPanel1.GetControlFromPosition(destinationPos.X, destinationPos.Y) == null)
+                    {
+                        //MessageBox.Show("we can move button here");
+                        Button btn = (sender) as Button;
+
+                        btn.Dock = DockStyle.Fill;
+                        tableLayoutPanel1.Controls.Add(btn, destinationPos.X, destinationPos.Y);
+                        Console.WriteLine("Button " + btn.Text + " Moved Successfully");
+
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("we have " + tableLayoutPanel1.GetControlFromPosition(destinationPos.X, destinationPos.Y).ToString() + " here");
+                    }
+
+                    Console.WriteLine("Mouse Up at ---->" + cellPos.ToString());
+                }
+
+
+                catch (Exception e1)
+                {
+
+                    MessageBox.Show("Can't move outside the table " + e1.Message);
+                }
+            }
+
+
+
+
+        }
 
         private void MenuGroup_Load(object sender, EventArgs e)
         {
@@ -124,6 +232,10 @@ namespace supershop.Ordering
         }
 
         
+
+
+
+
         private void button_click_menuGroupEditor(object sender, EventArgs e)
         {
             MyButton clickedButton = (MyButton)sender;

@@ -16,7 +16,7 @@ namespace supershop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
+            //Application.Run(new MenuGroups.MenuGroupsAll());
             Application.Run(new Login()); //  <<--- This will ask to login first
             Application.Run(new Home());
            // Console.WriteLine("testin");

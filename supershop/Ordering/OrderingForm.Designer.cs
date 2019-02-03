@@ -591,7 +591,7 @@ namespace supershop.Ordering
             this.tabControl2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl2.ImageList = this.imageList1;
             this.tabControl2.ItemSize = new System.Drawing.Size(100, 50);
-            this.tabControl2.Location = new System.Drawing.Point(4, 61);
+            this.tabControl2.Location = new System.Drawing.Point(4, 59);
             this.tabControl2.Margin = new System.Windows.Forms.Padding(5);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.Padding = new System.Drawing.Point(5, 5);
